@@ -1,0 +1,295 @@
+/*Responsive Grid Setup*********************************/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/*Overall grid container*/
+.grid {
+    width: 100%;
+}
+
+/*Single Row in the grid*/
+.row {
+    margin-bottom: 1em;
+}
+
+/*Finds all classes with "-col" in*/
+.grid, .row, [class*="-col"] {
+    padding: 0;
+    margin: 0;
+}
+
+/*Clearfix which helps with floats*/
+.grid:after, .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Don't need spacing for bottom row*/
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/*Columns code*/
+/*12 col grid, 1.5% gutter*/
+[class*="-col"] {
+  float: left;
+  margin-right: 1.5%;
+}
+
+[class*="-col"]:last-child {
+    margin-right: 0;
+}
+
+/*Column values*************************************/
+.one-col {
+  width: 6.958%;
+}
+
+.two-col {
+  width: 15.41%;
+}
+
+.three-col {
+  width: 23.87%;
+}
+
+.four-col {
+  width: 32.33%;
+}
+
+.five-col {
+  width: 40.79%;
+}
+
+.six-col {
+  width: 49.25%;
+}
+
+.seven-col {
+  width: 57.70%;
+}
+
+.eight-col {
+  width: 66.16%;
+}
+
+.nine-col {
+  width: 74.62%;
+}
+
+.ten-col {
+  width: 83.08%;
+}
+
+.eleven-col {
+  width: 91.54%;
+}
+
+.twelve-col {
+  width: 100%;
+}
+
+/*Offsets******************************************/
+.one-offset {
+  margin-left: 8.458%;
+}
+
+.two-offset {
+  margin-left: 16.91%;
+}
+
+.three-offset {
+  margin-left: 25.37%;
+}
+
+.four-offset {
+  margin-left: 33.83%;
+}
+
+.five-offset {
+  margin-left: 42.29%;
+}
+
+.six-offset {
+  margin-left: 50.75%;
+}
+
+.seven-offset {
+  margin-left: 59.20%;
+}
+
+.eight-offset {
+  margin-left: 67.66%;
+}
+
+.nine-offset {
+  margin-left: 76.12%;
+}
+
+.ten-offset {
+  margin-left: 84.58%;
+}
+
+.eleven-offset {
+  margin-left: 91.54%;
+}
+
+/* Grid Code **************************************/
+.grid {
+    max-width: 1350px;
+}
+
+/* rest of grid code goes here... */
+
+/* Coloring Code */
+.grid {
+    background-color: #999;
+}
+
+.row {
+    background-color: #BBB;
+}
+
+[class*="-col"] {
+    /*background-color: #EEE*/;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+/*Main Style for responsive blog*****************************/
+
+html{
+	border: solid blue 1px;
+}
+
+body{
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.grid{
+	border: solid red 1px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+/*TOP****************************************/
+header{
+	border: dashed green 1px;
+	margin: 0;
+	height: 110px;
+	background-color: #d3cbec;
+	color: white;
+}
+
+.fixed_head{
+	border: dashed black 1px;
+	display: block;
+	background-color: rgba(95,118,133,0.8);
+	height: 50px;
+	position: fixed;
+	z-index: 25;
+	top: 0;
+	left: 0;
+}
+
+.home_div{
+	border: solid red 1px;
+	height: inherit;
+	float: left;
+	position: relative;
+}
+
+#home{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#mobile_menu{
+	display: none;
+}
+
+.social_ul{
+	border: dashed green 1px;
+	float: right;
+	height: inherit;
+	vertical-align: middle;
+}
+
+.social_ul > li{
+	display: inline-block;
+	margin-left: 5px;
+	right: 0;
+	padding: 15px 5px 15px 5px;
+}
+
+.social_ul > li:last-child{
+	margin: 0 35px;
+}
+
+#share{
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+
+/***************MIDDLE*****************************/
+.main_row{
+	position: relative;
+}
+
+.main_articleContain{
+	border: solid yellow 1px;
+	float: right;
+	margin: -15px 150px 0 30px;
+	/*position: absolute;
+	top: -10px;
+	right: 150px;*/
+}
+
+.sidebar_contain{
+	border: solid orange 1px;
+	margin: -15px 30px 0 50px;
+	float: left;
+	/*position: absolute;
+	top: -10px;
+	left: 50px;*/
+}
+
+
+/*Media Queries**********************************/
+
+/*Columns expand to 100%*/
+@media all and (max-width: 768px) {
+  [class*="-col"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .row:last-child > [class*="-col"]:last-child {
+    margin-bottom: 0;
+  }
+	
+/*Offsets removed*/
+[class*="-offset"] {
+    margin-left: 0;
+  }
+
+/*Remove margins on rows*/
+.row {
+    margin: 0;
+  }
+}
