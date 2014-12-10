@@ -199,7 +199,7 @@ header{
 }
 
 .fixed_head{
-	border: dashed black 1px;
+	/*border: dashed black 1px;*/
 	display: block;
 	background-color: rgba(95,118,133,0.8);
 	height: 50px;
@@ -212,20 +212,23 @@ header{
 
 .home_div{
 	height: 100%;
-	border: solid red 1px;
+	/*border: solid red 1px;*/
 	float: left;
 	position: relative;
-	width: 30%;
+	min-width: 150px;
+	margin-left: 2%;
 }
 
 
 #home p{
 	/*border: dashed red 1px;*/
-	text-align: center;
+	height: inherit;
 	font-family: 'Pacifico', cursive;
 	font-size: 1.75em;
+	padding: 1%;
 	width: 50%;
 	float: left;
+	margin-top: 1.5%;
 }
 
 #home p:hover{
@@ -238,12 +241,13 @@ header{
 }
 
 #mobile_menu{
-	border: dashed red 1px;
+/*	border: dashed blue 1px;*/
 	width: 50%;
 	float: right;
-	font-size: 4.5em;
+	font-size: 4em;
 	text-align: left;
 	display: none;
+	padding: 5% 1% .5%;
 }
 
 #mobile_menu:hover{
@@ -252,11 +256,12 @@ header{
 }
 
 .social_ul{
-	border: dashed green 1px;
+	/*border: dashed green 1px;*/
 	float: right;
 	height: inherit;
-	padding: 10px .5%;
-	white-space:nowrap;
+	padding: 15px .5% 2px 0;
+	white-space: nowrap;
+	margin-left: 1%;
 }
 
 #share{
@@ -267,7 +272,7 @@ header{
 .social_ul > li{
 	display: inline;
 	margin-left: 1%;
-	padding: 2% 1.25%;
+	padding: 5px;
 	font-size: 1.7em;
 }
 
@@ -289,7 +294,7 @@ header{
 
 /*********MAIN ARTICLE HEAD***********/
 .main_articleContain{
-	border: solid yellow 1px;
+	/*border: solid yellow 1px;*/
 	float: right;
 	margin: -1.5% 10% 0 3%;
 	background-color: #f1f3f2;
@@ -335,7 +340,7 @@ header{
 
 /*********MAIN ARTICLE TEXT***********/
 .article_text{
-	border: orange solid 2px;
+	/*border: orange solid 2px;*/
 	color: #4b4d4c;
 	margin-top: 5%;
 	font-family: 'Muli', sans-serif;
@@ -373,7 +378,7 @@ header{
 	width: 100%;
 	background-color: #fff;
 	padding:7px;
-	border: solid 1px #ddd;
+	/*border: solid 1px #ddd;*/
 	height: inherit;
 }
 
@@ -408,7 +413,7 @@ header{
 
 .article_footer ul li{
 	display: inline-block;
-	margin-left: 3%;
+	margin-left: 10px;
 	font-size: 1.3em;
 }
 
@@ -443,7 +448,7 @@ header{
 
 /*********SIDEBAR CONTENT***************************************/
 .sidebar_contain{
-	border: solid orange 1px;
+	/*border: solid orange 1px;*/
 	margin: -1.5% 3% 0 3%;
 	float: left;
 	position: fixed;
