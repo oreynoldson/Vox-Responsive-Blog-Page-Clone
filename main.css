@@ -40,7 +40,7 @@
 }
 
 [class*="-col"]:last-child {
-    margin-right: 0;
+    /*margin-right: 0;*/
 }
 
 /*Column values*************************************/
@@ -150,7 +150,7 @@
 }
 
 .row {
-    background-color: #9599a5;
+    background-color: darken(rgba(95,118,133,1), 10%);
 }
 
 [class*="-col"] {
@@ -193,7 +193,7 @@ header{
 	/*border: dashed green 1px;*/
 	margin: 0;
 	height: 110px;
-	background-color: #9599a5;/*Cheap hack to prevent more work*/
+	background-color: #a8b1c9;
 	color: white;
 	font-family: 'Karla', sans-serif;
 }
@@ -215,13 +215,17 @@ header{
 	border: solid red 1px;
 	float: left;
 	position: relative;
+	width: 30%;
 }
 
 
 #home p{
+	/*border: dashed red 1px;*/
 	text-align: center;
 	font-family: 'Pacifico', cursive;
 	font-size: 1.75em;
+	width: 50%;
+	float: left;
 }
 
 #home p:hover{
@@ -234,26 +238,35 @@ header{
 }
 
 #mobile_menu{
+	border: dashed red 1px;
+	width: 50%;
+	float: right;
+	font-size: 4.5em;
+	text-align: left;
 	display: none;
+}
+
+#mobile_menu:hover{
+	cursor: pointer;
+	color: #ddd;
 }
 
 .social_ul{
 	border: dashed green 1px;
 	float: right;
 	height: inherit;
-	padding: .5%;
+	padding: 10px .5%;
+	white-space:nowrap;
 }
 
 #share{
-	margin-left: 21%;
 	color: #ddd;
 	font-size: 1.1em
 }
 
 .social_ul > li{
-	display: inline-block;
+	display: inline;
 	margin-left: 1%;
-	right: 0;
 	padding: 2% 1.25%;
 	font-size: 1.7em;
 }
@@ -264,7 +277,7 @@ header{
 }
 
 .social_ul > li:last-child{
-	margin: 0 6.1%;
+	margin: 0 6%;
 	font-style: italic;
 }
 
@@ -390,6 +403,7 @@ header{
 .social_ulBottom{
 	/*border: solid black 1px;*/
 	margin-top: 7px;
+	white-space:nowrap;
 }
 
 .article_footer ul li{
@@ -442,7 +456,7 @@ header{
 .sidebar_head_contain{
 	height: 225px;
 	width: 100%;
-	padding: 10%;
+	padding: 5% 10%;
 	background-color: #fff200; 
 }
 
@@ -452,14 +466,16 @@ header{
 }
 
 .sidebar_head h1 {
-	font-size: 2.7em;
+	font-size: 2.3em;
 	font-weight: 700;
+	font-family: 'Cousine', sans-serif;
 }
 
 .article_info{
 	margin-top: 6%;
 	text-transform: uppercase;
-	font-size: 1.1em
+	font-size: 1.1em;
+	font-family: 'Muli', sans-serif;
 }
 
 .article_info p{
@@ -495,6 +511,7 @@ header{
 	color: #666;
 	position: relative;
 	list-style-type: decimal;
+	font-family: 'Muli', sans-serif;
 }
 
 .sidebar_list > li {
@@ -512,24 +529,54 @@ header{
 }
 /*Media Queries**********************************/
 
-/*Columns expand to 100%*/
-@media all and (max-width: 768px) {
-  [class*="-col"] {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .row:last-child > [class*="-col"]:last-child {
-    margin-bottom: 0;
-  }
-	
-/*Offsets removed*/
-[class*="-offset"] {
-    margin-left: 0;
-  }
-
-/*Remove margins on rows*/
-.row {
-    margin: 0;
-  }
+@media all and (max-width: 1200px){
+	/*Makes size of the article div larger/ reduces margins*/
+	.main_articleContain{
+		margin: -1.5% 2% 0 3%;
+		width: 68%;
+	}
 }
+
+@media all and (max-width: 1080px){
+	/*Pushes sidebar all the way to left*/
+	.sidebar_contain{
+		margin: -1.5% 1% 0 0;
+		width: 27.5%;
+		min-width: 245px;
+	}
+
+	.main_articleContain{
+		margin-left: 1%;
+	}
+
+}
+
+@media all and (max-width: 880px) {
+	
+	.sidebar_contain{
+		display: none;
+	}
+
+	#mobile_menu{
+		display: block;
+	}
+
+	#share{
+		display: none;
+	}
+
+	.main_articleContain{
+		width: 92%;
+		margin: -1.5% 4% 0 1%;
+	}
+}
+
+@media all and (max-width: 600px) {
+
+	.social_ulBottom {
+		margin-left: 26%;
+	}
+}
+
+
+
