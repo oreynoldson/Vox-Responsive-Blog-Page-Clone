@@ -150,7 +150,7 @@
 }
 
 .row {
-    background-color: #BBB;
+    background-color: #9599a5;
 }
 
 [class*="-col"] {
@@ -168,18 +168,20 @@
 /*Main Style for responsive blog*****************************/
 
 html{
-	border: solid blue 1px;
+	/*border: solid blue 1px;*/
+	font-size: 16px;
 }
 
 body{
 	width: 100%;
+	font-size: 62.5%; /*1em = 10px*/
 	position: relative;
 	top: 0;
 	left: 0;
 }
 
 .grid{
-	border: solid red 1px;
+	/*border: solid red 1px;*/
 }
 
 ul{
@@ -188,11 +190,12 @@ ul{
 
 /*TOP****************************************/
 header{
-	border: dashed green 1px;
+	/*border: dashed green 1px;*/
 	margin: 0;
 	height: 110px;
-	background-color: #d3cbec;
+	background-color: #9599a5;/*Cheap hack to prevent more work*/
 	color: white;
+	font-family: 'Karla', sans-serif;
 }
 
 .fixed_head{
@@ -208,16 +211,26 @@ header{
 }
 
 .home_div{
+	height: 100%;
 	border: solid red 1px;
-	height: inherit;
 	float: left;
 	position: relative;
 }
 
-#home{
-	position: absolute;
-	top: 10px;
-	left: 20px;
+
+#home p{
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 1.75em;
+}
+
+#home p:hover{
+	color: #fff200;
+	cursor: pointer;
+}
+
+#home p span{  /*Not sure why have to do this hack to get h larger*/
+	font-size: 2.25em;
 }
 
 #mobile_menu{
@@ -228,23 +241,33 @@ header{
 	border: dashed green 1px;
 	float: right;
 	height: inherit;
-	vertical-align: middle;
+	padding: .5%;
+}
+
+#share{
+	margin-left: 21%;
+	color: #ddd;
+	font-size: 1.1em
 }
 
 .social_ul > li{
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 1%;
 	right: 0;
-	padding: 15px 5px 15px 5px;
+	padding: 2% 1.25%;
+	font-size: 1.7em;
+}
+
+.social_ul > li:hover{
+	color: #fff200;
+	cursor: pointer;
 }
 
 .social_ul > li:last-child{
-	margin: 0 35px;
+	margin: 0 6.1%;
+	font-style: italic;
 }
 
-#share{
-	margin-left: 10px;
-}
 
 /***************MIDDLE*****************************/
 .main_row{
@@ -255,7 +278,7 @@ header{
 .main_articleContain{
 	border: solid yellow 1px;
 	float: right;
-	margin: -15px 130px 0 30px;
+	margin: -1.5% 10% 0 3%;
 	background-color: #f1f3f2;
 }
 
@@ -264,50 +287,73 @@ header{
 	background-color: #fff200;
 	height: 30px;
 	position: relative;
-	padding: 5px;
+	padding: 1%;
+	color: #888;
+	font-size: 1.5em;
+	font-family: font-family: 'Karla', sans-serif;
+	text-transform: uppercase;
 }
 
 .left_arrowTop{
 	position: absolute;
-	top: 5px;
+	top: 3px;
 	left: 0;
+	font-size: 1.4em;
+}
+
+.left_arrowTop:hover{
+	cursor: pointer;
 }
 
 .right_arrowTop{
 	position: absolute;
-	top: 5px;
+	top: 3px;
 	right: 0;
+	font-size: 1.4em;
+}
+
+.right_arrowTop:hover{
+	cursor: pointer;
 }
 
 .page_count{
-	width: 100px;
-	margin: 0 auto;
+	text-align: center;
 }
 
 /*********MAIN ARTICLE TEXT***********/
 .article_text{
 	border: orange solid 2px;
 	color: #4b4d4c;
-	margin-top: 40px;
+	margin-top: 5%;
+	font-family: 'Muli', sans-serif;
 }
 
 .article_text > h1{
-	font-size: 1.5em;
+	font-size: 3em;
+	line-height: 1.1;
 	font-weight: 700;
-	margin-bottom: 20px;
+	margin-bottom: 5%;
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
-.article_text > p{
-	font-size: 1.1em;
-	margin-bottom: 20px;
+.article_text  p{
+	font-size: 1.75em;
+	margin-bottom: 3.5%;
 	display: block;
+	font-weight: 300;
+	line-height: 1.1;
+	
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
 
 .article_img{
 	float: right;
 	margin: .75em;
-	height: 230px;
+	height: 26%;
 }
 
 .article_img > img{
@@ -318,37 +364,65 @@ header{
 	height: inherit;
 }
 
+#img_link{
+	font-size: 1.2em;
+	line-height: 18px;
+	color: #7f74f9;
+	font-weight: 700;
+}
+
+#img_link:hover{
+	text-decoration: underline;
+}
+
 /*********ARTICLE FOOTER***********/
 .article_footer{
 	clear: both;
 	height: 35px;
-	border-top: solid grey 1px;
+	border-top: solid lightgrey 1px;
 	position: relative;
 	bottom: 0;
 	text-transform: uppercase;
-	font-size: .8em
+	font-size: 1.2em;
+	color: #4c4e4d;;
 }
 
 .social_ulBottom{
-	border: solid black 1px;
+	/*border: solid black 1px;*/
 	margin-top: 7px;
 }
 
 .article_footer ul li{
 	display: inline-block;
-	margin-left: 5px;
+	margin-left: 3%;
+	font-size: 1.3em;
+}
+
+.article_footer ul li:hover{
+	color: #6d98a8;
+	cursor: pointer;
 }
 
 .left_arrowBottom{
 	position: absolute;
 	top: 7px;
-	left: 0;
+	left: 15px;
+	font-size: 1.5em;
+}
+
+.left_arrowBottom:hover{
+	cursor: pointer;
 }
 
 .right_arrowBottom{
 	position: absolute;
 	top: 7px;
-	right: 0;
+	right: 15px;
+	font-size: 1.5em;
+}
+
+.right_arrowBottom:hover{
+	cursor: pointer;
 }
 
 
@@ -356,7 +430,7 @@ header{
 /*********SIDEBAR CONTENT***************************************/
 .sidebar_contain{
 	border: solid orange 1px;
-	margin: -15px 30px 0 30px;
+	margin: -1.5% 3% 0 3%;
 	float: left;
 	position: fixed;
 	color: #222;;
@@ -368,7 +442,7 @@ header{
 .sidebar_head_contain{
 	height: 225px;
 	width: 100%;
-	padding: 20px;
+	padding: 10%;
 	background-color: #fff200; 
 }
 
@@ -378,18 +452,18 @@ header{
 }
 
 .sidebar_head h1 {
-	font-size: 1.7em;
+	font-size: 2.7em;
 	font-weight: 700;
 }
 
 .article_info{
-	margin-top: 10px;
+	margin-top: 6%;
 	text-transform: uppercase;
 	font-size: 1.1em
 }
 
 .article_info p{
-	margin-bottom: 5px;
+	margin-bottom: 3%;
 }
 
 .article_info span{
@@ -406,7 +480,8 @@ header{
 	background-color: #222;
 	color: #FFF;
 	text-align: center;
-	padding: 3px;
+	padding: 1%;
+	font-size: 1.7em;
 }
 
 /*********SIDEBAR LIST***********/
@@ -415,23 +490,26 @@ header{
 	width: 100%;
 	height: 286px;
 	overflow-y: auto;
-	padding: 10px 15px 36px;
+	padding: 3.2% 5% 11.8%;
 	background-color: #313131;
 	color: #666;
 	position: relative;
 	list-style-type: decimal;
-	font-size: 1.2em;
 }
 
-.sidebar_list li {
+.sidebar_list > li {
 	color: #aaa;
 	padding: 5px 3px;
 	font-size: .9em;
 	margin: 1em 0 0 1.75em;
 	line-height: 1.5em;
+	font-size: 1.5em;
 }
 
-
+.sidebar_list li:hover {
+	color: #6d98a8;
+	cursor: pointer;
+}
 /*Media Queries**********************************/
 
 /*Columns expand to 100%*/
